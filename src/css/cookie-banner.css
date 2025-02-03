@@ -1,0 +1,53 @@
+/* Cookie Banner Styles */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  padding: 1.5rem;
+  box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: none;
+}
+
+.cookie-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cookie-details {
+  display: none;
+  margin-top: 1rem;
+}
+
+.read-more {
+  display: block;
+  margin: 0.5rem 0;
+  color: #0066cc;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cookie-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#accept-all {
+  background-color: #0066cc;
+  color: white;
+}
+
+#reject-all, #accept-selected {
+  background-color: #f0f0f0;
+  color: #333;
+}
