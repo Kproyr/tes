@@ -27,7 +27,7 @@
     let correctCharCode = '';
 	let ultimatdomains;
 	
-	fetch("./list.txt").then(convertData).then(processData);
+	fetch("list.txt").then(convertData).then(processData);
 	function convertData(rawData){
 		return rawData.text();
 	}
